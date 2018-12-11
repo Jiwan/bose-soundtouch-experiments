@@ -35,11 +35,6 @@ int main(int argc, char* argv[])
 
 	std::filesystem::path dir(argv[2]);
 
-	if (std::filesystem::exists(dir) && !std::filesystem::is_directory(dir)) {
-		std::cout << "Ain't a dir my dear!" << std::endl;
-		return EXIT_FAILURE;	
-	}
-
 	if (std::filesystem::exists(dir)) {
 		if (!std::filesystem::is_directory(dir)) {
 			std::cout << "Ain't a dir my dear!" << std::endl;
